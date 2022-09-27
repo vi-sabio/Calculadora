@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-button color="dark" (click)="limpar()">
+        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="dark">Calculadora</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+<ion-content>
+  <ion-item>
+    <ion-label  position="floating" >Primeiro Número: </ion-label>
+    <ion-input type="number" [(ngModel)]="primeirovalor"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <ion-label  position="floating" >Segundo Número: </ion-label>
+    <ion-input type="number" [(ngModel)]="segundovalor"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-content>
+  <ion-button color="danger" shape="round" (click)="somar()"> + </ion-button>
+  <ion-button color="danger" shape="round" (click)="subtrair()"> - </ion-button>
+  <ion-button color="danger" shape="round" (click)="multiplicar()"> * </ion-button>
+  <ion-button color="danger" shape="round" (click)="dividir()"> / </ion-button>
+</ion-content>
+
+<ion-content>
+  <ion-button color="danger" shape="round" (click)="maior()"> MAIOR < </ion-button>
+  <ion-button color="danger" shape="round" (click)="menor()"> > MENOR </ion-button>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Resultado: {{resultado}} </ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Conta: {{operacao}}</ion-label>
+  </ion-item>
+</ion-content>
