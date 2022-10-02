@@ -1,73 +1,64 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="dark" >
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-toolbar color="dark" >
         <ion-title align="center" >Calculadora 2</ion-title>
-    <ion-buttons slot="primary">
-    </ion-buttons>
   </ion-toolbar>
 
 
-  <ion-item>
-    <ion-label  position="floating" >Operação: </ion-label>  
-    <ion-input type="number" [(ngModel)]="operacao"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Resultado: {{resultado}} </ion-label>
-  </ion-item>
+  <ion-content [fullscreen]="true">
+    <ion-item>
+      <ion-label class="operacao">Operação:</ion-label>
+      <ion-input [(ngModel)]="operacao"></ion-input>
+    </ion-item>
+    <ion-input class="input" [(ngModel)]="insert"></ion-input>
+    <ion-item>
+      <ion-label class="resultado">Resultado:</ion-label>
+      <ion-input [(ngModel)]="numero"></ion-input>
+    </ion-item>
 
   <ion-grid>
     <ion-row>
-      
+
+
       <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">MC</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-button color="dark">MC</ion-button>
       </ion-col>
-      
+
       <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">MR</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-button color="dark" >MR</ion-button>
       </ion-col>
-      
+
       <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">M+</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-button color="dark" >M+</ion-button>
       </ion-col>
-      
+
       <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">M-</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-button color="dark" >M-</ion-button>
       </ion-col>
-      
+
       <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">MS</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+        <ion-button color="dark" >MS</ion-button>
       </ion-col>
-      
+
       <ion-col size="2">
-          <ion-button color="dark" (click)="limpar()">M</ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+          <ion-button color="dark">M</ion-button>
       </ion-col>
 
     </ion-row>
   </ion-grid>
-  
+
   <ion-grid>
     <ion-row>
-  
-      <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">%</ion-button>
-        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+      <ion-col size="3" size="large">
+        <ion-button color="dark">%</ion-button>
       </ion-col>
-      <ion-col size="2">
-        <ion-button color="dark" (click)="limpar()">CE</ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+      <ion-col size="3" size="large">
+        <ion-button color="dark">CE</ion-button>
       </ion-col>
-      <ion-col size="2">
+      <ion-col size="3" size="large">
         <ion-button color="dark" (click)="limpar()">C</ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>        
       </ion-col>
-      <ion-col size="2">
+      <ion-col size="3" size="large">
         <ion-button color="dark" (click)="limpar()">
           <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
         </ion-button>
@@ -79,138 +70,118 @@
 <ion-grid>
   <ion-row>
 
-      <ion-col>
+      <ion-col size="large" size="3">
         <ion-button color="dark" (click)="limpar()">¹/x</ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
       </ion-col>
 
-      <ion-col>
+      <ion-col size="large" size="3">
         <ion-button color="dark" (click)="limpar()"> x² </ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
       </ion-col>
 
-      <ion-col>
-        <ion-button color="dark" (click)="limpar()">  </ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+      <ion-col size="large" size="3">
+        <ion-button color="dark" (click)="limpar()"> ²√x </ion-button>
       </ion-col>
 
-      <ion-col>
-        <ion-button color="dark" (click)="limpar()">  </ion-button>
-          <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+      <ion-col size="large" size="3">
+        <ion-button color="dark" (click)="limpar()"> ÷ </ion-button>
       </ion-col>
 
 
 
 
     </ion-row>
-  </ion-grid>    
-  
+  </ion-grid>
+
   <ion-grid>
     <ion-row>
-  
-        <ion-col>
-          <ion-button color="dark" (click)="limpar()">7</ion-button>
-            <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+        <ion-col size="large" size="3">
+          <ion-button color="light" (click)="limpar()">7</ion-button>
         </ion-col>
-  
-        <ion-col>
-          <ion-button color="dark" (click)="limpar()">8</ion-button>
-            <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+        <ion-col size="large" size="3">
+          <ion-button color="light" (click)="limpar()">8</ion-button>
         </ion-col>
-  
-        <ion-col>
-          <ion-button color="dark" (click)="limpar()"> 9 </ion-button>
-            <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+        <ion-col size="large" size="3">
+          <ion-button color="light" (click)="limpar()"> 9 </ion-button>
         </ion-col>
-  
-        <ion-col>
+
+        <ion-col size="large" size="3">
           <ion-button color="dark" (click)="limpar()"> x </ion-button>
-            <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
         </ion-col>
-  
-  
-  
-  
+
+
+
+
       </ion-row>
-    </ion-grid>    
+    </ion-grid>
 
     <ion-grid>
       <ion-row>
-    
-          <ion-col>
-            <ion-button color="dark" (click)="limpar()"> 4 </ion-button>
-              <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+          <ion-col size="large" size="3">
+            <ion-button color="light" (click)="limpar()"> 4 </ion-button>
           </ion-col>
-    
-          <ion-col>
-            <ion-button color="dark" (click)="limpar()"> 5 </ion-button>
-              <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+          <ion-col size="large" size="3">
+            <ion-button color="light" (click)="limpar()"> 5 </ion-button>
           </ion-col>
-    
-          <ion-col>
-            <ion-button color="dark" (click)="limpar()"> 6 </ion-button>
-              <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+          <ion-col size="large" size="3">
+            <ion-button color="light" (click)="limpar()"> 6 </ion-button>
           </ion-col>
-    
-          <ion-col>
+
+          <ion-col size="large" size="3">
             <ion-button color="dark" (click)="limpar()"> - </ion-button>
-              <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
           </ion-col>
-    
-    
+
+
         </ion-row>
-      </ion-grid> 
+      </ion-grid>
 
       <ion-grid>
         <ion-row>
-      
-            <ion-col>
-              <ion-button color="dark" (click)="limpar()"> 1 </ion-button>
-                <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+            <ion-col size="large" size="3">
+              <ion-button color="light" (click)="limpar()"> 1 </ion-button>
             </ion-col>
-      
-            <ion-col>
-              <ion-button color="dark" (click)="limpar()"> 2 </ion-button>
-                <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+            <ion-col size="large" size="3">
+              <ion-button color="light" (click)="limpar()"> 2 </ion-button>
             </ion-col>
-      
-            <ion-col>
-              <ion-button color="dark" (click)="limpar()"> 3 </ion-button>
-                <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+            <ion-col size="large" size="3">
+              <ion-button color="light" (click)="limpar()"> 3 </ion-button>
             </ion-col>
-      
-            <ion-col>
+
+            <ion-col size="large" size="3">
               <ion-button color="dark" (click)="limpar()"> + </ion-button>
-                <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
             </ion-col>
-      
-      
+
+
           </ion-row>
-        </ion-grid> 
+        </ion-grid>
 
         <ion-grid>
           <ion-row>
-        
-              <ion-col>
-                <ion-button  color="dark" (click)="limpar()"> +/-</ion-button>
-                  <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+              <ion-col size="large" size="3">
+                <ion-button  color="light" (click)="limpar()"> +/-</ion-button>
               </ion-col>
-        
-              <ion-col>
-                <ion-button color="dark" (click)="limpar()"> 0 </ion-button>
-                  <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+              <ion-col size="large" size="3">
+                <ion-button color="light" (click)="limpar()"> 0 </ion-button>
               </ion-col>
-        
-              <ion-col>
-                <ion-button color="dark" (click)="limpar()"> , </ion-button>
-                  <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+
+              <ion-col size="large" size="3">
+                <ion-button color="light" (click)="limpar()"> , </ion-button>
               </ion-col>
-        
-              <ion-col>
+
+              <ion-col size="large" size="3">
                 <ion-button color="dark" (click)="limpar()"> = </ion-button>
-                  <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
               </ion-col>
-        
-        
+
+
             </ion-row>
-          </ion-grid> 
+          </ion-grid>
