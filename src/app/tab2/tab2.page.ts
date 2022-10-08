@@ -10,9 +10,19 @@ export class Tab2Page {
 
   operacao = '';
   resultado = '';
+  ultimovalor = '';
 
 
   constructor() {}
+  
+  adicionarValor(valor:string){
+    if(this.operacao !=="){
+
+      this.ultimoValor= this.operacao[this.operacao.length-1];
+    }
+    if(valor)
+  }
+  
 
   adicionarValor(valor: string) {
     this.operacao += valor;
